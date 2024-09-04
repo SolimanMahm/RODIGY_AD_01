@@ -1,4 +1,4 @@
-# RODIGY_AD_01
+# Calculator
 Build a calculator app that can perform basic arithmetic operations.
 <div align="start">
      <a href="https://api.visitorbadge.io/api/visitors?path=ChatterBox-AI-App&label=People%20who%20visited%20this%20page&countColor=%23263759" target="_blank">
