@@ -23,7 +23,23 @@ Build a calculator app that can perform basic arithmetic operations.
 ## 💻 Example
 
 - Infix : 1 + 2
-<br>
 - Posfix: 1 2 +
-- 
+  
 <hr>
+
+
+## ✨ UI
+
+![WhatsApp Image 2024-09-04 at 15 09 55_95e8c041](https://github.com/user-attachments/assets/479264a4-808b-4ef2-b54e-cc286da591e2)
+
+<hr>
+
+![WhatsApp Image 2024-09-04 at 15 09 55_a0159f29](https://github.com/user-attachments/assets/d559e4cf-9c82-4214-8723-0901356cb0f0)
+
+<hr>
+
+## 🚨 Contributing
+
+- Contributions are welcome 💜
+- If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
