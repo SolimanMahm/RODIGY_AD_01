@@ -17,9 +17,13 @@ Build a calculator app that can perform basic arithmetic operations.
 - It can be used in `dark` mode or `light` mode. 
 - Perform `basic` arithmetic operations. 
 - I have relied upon the `Postfix expression`s to perform arithmetic operations correctly. They take into account the `order of priorities of mathematical operations`.
+  
 <hr>
+
 ## 💻 Example
+
 - Infix : 1 + 2
 <br>
 - Posfix: 1 2 +
+- 
 <hr>
