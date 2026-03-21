@@ -26,11 +26,35 @@ QR Code Scanner & Generator App: Developed a mobile app to scan, generate, save,
 
 ## ✨ UI
 
-
+![1](https://github.com/user-attachments/assets/52f2d8be-32f5-4bc0-b98e-005a5802dba0)
 
 <hr>
 
+![2](https://github.com/user-attachments/assets/8c7d1517-a641-4e73-93dc-1b6d93e9606e)
 
+<hr>
+
+![3](https://github.com/user-attachments/assets/51c3220f-a2c4-4273-ba4d-34eefd38c24e)
+
+<hr>
+
+![4](https://github.com/user-attachments/assets/b8099db3-b1f4-4bb2-944f-e3f381bec29d)
+
+<hr>
+
+![5](https://github.com/user-attachments/assets/c719744d-5ed3-408f-8960-9fae3f15ebcc)
+
+<hr>
+
+![6](https://github.com/user-attachments/assets/c926f45b-6088-4ca4-a229-23a3ed70d079)
+
+<hr>
+
+![7](https://github.com/user-attachments/assets/117df85a-246e-4b31-8a81-6dbbb1ab8902)
+
+<hr>
+
+![8](https://github.com/user-attachments/assets/20e1bfe4-2d77-43cb-ad2b-5a018fcd9b78)
 
 <hr>
 
