@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_title">انطلق واستمتع بميزاتنا مجاناً واجعل حياتك أسهل معنا.</string>
+    <string name="splash_start">هيا نبدأ</string>
+    <string name="history">سجل العمليات</string>
+    <string name="generate">توليد</string>
+    <string name="generate_qr">توليد رمز QR</string>
+    <string name="text">نص</string>
+    <string name="website">موقع إلكتروني</string>
+    <string name="wi_fi">واي فاي</string>
+</resources>

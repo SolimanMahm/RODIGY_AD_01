@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_charcoal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_35sdp"
+    tools:context=".splash_screen.FirstScreen">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:src="@drawable/group_10" />
+
+    <TextView
+        android:fontFamily="@font/itim_regular"
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:text="@string/splash_title"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone" />
+
+    <Button
+        android:fontFamily="@font/itim_regular"
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:backgroundTint="@color/beloved_sunflower"
+        android:drawableEnd="@drawable/ic32_arrow_right"
+        android:paddingVertical="@dimen/_8sdp"
+        android:paddingStart="@dimen/_40sdp"
+        android:text="@string/splash_start"
+        android:textAllCaps="false"
+        android:textColor="@color/dark_charcoal"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:cornerRadius="@dimen/_8sdp" />
+
+</LinearLayout>

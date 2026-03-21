@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_16sdp"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/dark_charcoal"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/_33sdp"
+                android:layout_height="@dimen/_33sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/group_10" />
+
+            <TextView
+                android:id="@+id/url"
+                style="@style/WrapContent.FontType.SettingsCardTitle"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="https://itunes.com"
+                app:layout_constraintStart_toEndOf="@+id/image"
+                app:layout_constraintTop_toTopOf="@+id/image" />
+
+            <TextView
+                android:id="@+id/data"
+                style="@style/WrapContent.FontType.SettingsCardSubTitle"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="Data"
+                android:textSize="@dimen/_9ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/image"
+                app:layout_constraintStart_toEndOf="@+id/image" />
+
+            <ImageView
+                android:id="@+id/ic_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/image"
+                app:srcCompat="@drawable/ic_round_delete_forever" />
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/WrapContent.FontType.SettingsCardSubTitle"
+                android:text="16 Dec 2022, 9:30 pm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ic_delete" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

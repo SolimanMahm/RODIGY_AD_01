@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/Base"
+    android:orientation="vertical"
+    tools:context=".SettingActivity">
+
+    <LinearLayout style="@style/TopBar">
+
+        <LinearLayout
+            android:id="@+id/btn_back"
+            style="@style/WrapContent.TopBarButtonBackground">
+
+            <ImageView
+                style="@style/TopBarButtonImage"
+                android:paddingLeft="@dimen/_4sdp"
+                app:srcCompat="@drawable/ic_back" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/WrapContent.FontType.title"
+        android:text="@string/settings" />
+
+    <LinearLayout style="@style/SettingsCard">
+
+        <ImageView
+            style="@style/WrapContent.SettingsCardIcon"
+            app:srcCompat="@drawable/ic_vibrate" />
+
+        <LinearLayout
+            android:id="@+id/vibrate"
+            style="@style/WrapContent.SettingsCardInnerContainer">
+
+            <TextView
+                style="@style/WrapContent.FontType.SettingsCardTitle"
+                android:text="@string/vibrate" />
+
+            <TextView
+                style="@style/WrapContent.FontType.SettingsCardSubTitle"
+                android:text="@string/vibration_when_scan_is_done" />
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/vibrate_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_16sdp" />
+
+    <LinearLayout style="@style/SettingsCard">
+
+        <ImageView
+            style="@style/WrapContent.SettingsCardIcon"
+            app:srcCompat="@drawable/ic_beep" />
+
+        <LinearLayout
+            android:id="@+id/beep"
+            style="@style/WrapContent.SettingsCardInnerContainer">
+
+            <TextView
+                style="@style/WrapContent.FontType.SettingsCardTitle"
+                android:text="@string/beep" />
+
+            <TextView
+                style="@style/WrapContent.FontType.SettingsCardSubTitle"
+                android:text="@string/beep_when_scan_is_done" />
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/beep_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/WrapContent.FontType.title"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/support" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_card_setting"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/SettingsCard">
+
+            <ImageView
+                style="@style/WrapContent.SettingsCardIcon"
+                app:srcCompat="@drawable/ic_rate" />
+
+            <LinearLayout
+                android:id="@+id/rate_us"
+                style="@style/WrapContent.SettingsCardInnerContainer">
+
+                <TextView
+                    style="@style/WrapContent.FontType.SettingsCardTitle"
+                    android:text="@string/rate_us" />
+
+                <TextView
+                    style="@style/WrapContent.FontType.SettingsCardSubTitle"
+                    android:text="@string/your_best_reward_to_us" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/dark_charcoal_84" />
+
+        <LinearLayout style="@style/SettingsCard">
+
+            <ImageView
+                style="@style/WrapContent.SettingsCardIcon"
+                app:srcCompat="@drawable/ic_share" />
+
+            <LinearLayout
+                android:id="@+id/share"
+                style="@style/WrapContent.SettingsCardInnerContainer">
+
+                <TextView
+                    style="@style/WrapContent.FontType.SettingsCardTitle"
+                    android:text="@string/share" />
+
+                <TextView
+                    style="@style/WrapContent.FontType.SettingsCardSubTitle"
+                    android:text="@string/share_app_with_others" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/dark_charcoal_84" />
+
+        <LinearLayout style="@style/SettingsCard">
+
+            <ImageView
+                style="@style/WrapContent.SettingsCardIcon"
+                app:srcCompat="@drawable/ic_privacy" />
+
+            <LinearLayout
+                android:id="@+id/privacy_policy"
+                style="@style/WrapContent.SettingsCardInnerContainer">
+
+                <TextView
+                    style="@style/WrapContent.FontType.SettingsCardTitle"
+                    android:text="@string/privacy_policy" />
+
+                <TextView
+                    style="@style/WrapContent.FontType.SettingsCardSubTitle"
+                    android:text="@string/follow_our_policies_that_benefits_you" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Base"
+    android:padding="0dp"
+    tools:context=".HistoryFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_image" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Base"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            style="@style/TopBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/WrapContent.FontType.TopBarTitle"
+                android:text="@string/history" />
+
+            <LinearLayout
+                android:id="@+id/btn_settings"
+                style="@style/WrapContent.TopBarButtonBackground">
+
+                <ImageView
+                    style="@style/TopBarButtonImage"
+                    app:srcCompat="@drawable/ic_settings" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_36sdp"
+            app:cardBackgroundColor="@color/dark_charcoal"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout2">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@android:color/transparent"
+                app:tabBackground="@drawable/tabs_selector"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabTextAppearance="@style/CustomTabTextAppearance"
+                app:tabTextColor="@android:color/darker_gray">
+
+                <com.google.android.material.tabs.TabItem style="@style/WrapContent" />
+
+                <com.google.android.material.tabs.TabItem style="@style/WrapContent" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_60sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

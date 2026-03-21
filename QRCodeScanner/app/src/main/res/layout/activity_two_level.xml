@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_charcoal_84"
+    android:padding="0dp"
+    tools:context=".generate.TwoLevelActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_image" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Base"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            style="@style/TopBar"
+            app:layout_constraintBottom_toTopOf="@id/container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/btn_back"
+                style="@style/WrapContent.TopBarButtonBackground">
+
+                <ImageView
+                    style="@style/TopBarButtonImage"
+                    android:paddingLeft="@dimen/_4sdp"
+                    app:srcCompat="@drawable/ic_back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/WrapContent.FontType.TopBarTitle"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="@string/contact" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/topBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="linearLayout2" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:scrollbarThumbVertical="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBarrier">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="9">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/borderCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:cardBackgroundColor="@color/dark_charcoal"
+                        app:layout_constraintBottom_toBottomOf="@id/container"
+                        app:layout_constraintEnd_toEndOf="@id/container"
+                        app:layout_constraintStart_toStartOf="@id/container"
+                        app:layout_constraintTop_toTopOf="@id/container"
+                        app:strokeColor="@color/beloved_sunflower"
+                        app:strokeWidth="@dimen/_2sdp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:paddingVertical="@dimen/_16sdp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="@+id/borderCard"
+                        app:layout_constraintEnd_toEndOf="@id/borderCard"
+                        app:layout_constraintStart_toStartOf="@id/borderCard"
+                        app:layout_constraintTop_toTopOf="@+id/borderCard"
+                        app:strokeColor="@color/dark_charcoal"
+                        app:strokeWidth="@dimen/_4sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/_8sdp"
+                            android:layout_marginVertical="@dimen/_16sdp">
+
+                            <ImageView
+                                android:id="@id/image"
+                                style="@style/Image"
+                                android:src="@drawable/ic_contact"
+                                app:layout_constraintBottom_toBottomOf="@id/card"
+                                app:layout_constraintTop_toTopOf="@id/card" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/image">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/fName"
+                                        style="@style/TitleTextField"
+                                        android:text="First Name"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/input_fName"
+                                        style="@style/EditText"
+                                        android:hint="Enter name"
+                                        android:inputType="textPersonName|textCapWords"
+                                        android:nextFocusDown="@id/input_lName"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/fName" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/lName"
+                                        style="@style/TitleTextField"
+                                        android:text="Last Name"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/input_lName"
+                                        style="@style/EditText"
+                                        android:hint="Enter Name"
+                                        android:inputType="textPersonName|textCapWords"
+                                        android:nextFocusDown="@id/input_company"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/lName" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/linearLayout1">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/company"
+                                        style="@style/TitleTextField"
+                                        android:text="Company"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/input_company"
+                                        style="@style/EditText"
+                                        android:hint="Enter company"
+                                        android:inputType="textCapWords"
+                                        android:nextFocusDown="@id/input_job"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/company" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/job"
+                                        style="@style/TitleTextField"
+                                        android:text="Job"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/input_job"
+                                        style="@style/EditText"
+                                        android:hint="Enter job"
+                                        android:inputType="textCapWords"
+                                        android:nextFocusDown="@id/input_phone"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/job" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/phone"
+                                        style="@style/TitleTextField"
+                                        android:text="Phone"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/input_phone"
+                                        style="@style/EditText"
+                                        android:hint="Enter phone"
+                                        android:inputType="phone"
+                                        android:nextFocusDown="@id/input_email"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/phone" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/email"
+                                        style="@style/TitleTextField"
+                                        android:text="Email"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/input_email"
+                                        style="@style/EditText"
+                                        android:hint="Enter email"
+                                        android:inputType="textEmailAddress"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/email" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/website"
+                                style="@style/TitleTextField"
+                                android:text="@string/website"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/linearLayout3" />
+
+                            <EditText
+                                android:id="@+id/input_website"
+                                style="@style/EditText"
+                                android:hint="Enter website"
+                                android:inputType="textUri"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/website" />
+
+                            <TextView
+                                android:id="@+id/address"
+                                style="@style/TitleTextField"
+                                android:text="Address"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/input_website" />
+
+                            <EditText
+                                android:id="@+id/input_address"
+                                style="@style/EditText"
+                                android:hint="Enter address"
+                                android:inputType="textCapWords"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/address" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/input_address">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/city"
+                                        style="@style/TitleTextField"
+                                        android:text="City"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/input_city"
+                                        style="@style/EditText"
+                                        android:hint="Enter city"
+                                        android:nextFocusDown="@id/input_country"
+                                        android:inputType="textCapWords"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/city" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/country"
+                                        style="@style/TitleTextField"
+                                        android:text="Country"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <EditText
+                                        android:id="@+id/input_country"
+                                        style="@style/EditText"
+                                        android:hint="Enter country"
+                                        android:inputType="textCapWords"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/country" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btn"
+                                style="@style/Button"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

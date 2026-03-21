@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Base"
+    android:orientation="vertical"
+    tools:context=".GenerateQR">
+
+    <LinearLayout style="@style/TopBar">
+
+        <TextView
+            style="@style/WrapContent.FontType.TopBarTitle"
+            android:text="@string/generate_qr" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/btn_settings"
+            style="@style/WrapContent.TopBarButtonBackground">
+
+            <ImageView
+                style="@style/TopBarButtonImage"
+                app:srcCompat="@drawable/ic_settings" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_150sdp"
+        android:layout_weight="1">
+
+        <!--   Text     -->
+        <RelativeLayout
+            android:id="@+id/text"
+            style="@style/GenerateButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_text"
+                style="@style/GenerateButtonBackground">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_text"
+                android:layout_alignEnd="@id/linearLayout_text">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/text" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--    Website    -->
+        <RelativeLayout
+            android:id="@+id/website"
+            style="@style/GenerateButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_website"
+                style="@style/GenerateButtonBackground"
+                android:background="@drawable/btn_background">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_website" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_website"
+                android:layout_alignEnd="@id/linearLayout_website">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/website" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--   Wi-Fi     -->
+        <RelativeLayout
+            android:id="@+id/Wi_Fi"
+            style="@style/GenerateButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_wi_fi"
+                style="@style/GenerateButtonBackground"
+                android:background="@drawable/btn_background">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_wi_fi" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_wi_fi"
+                android:layout_alignEnd="@id/linearLayout_wi_fi">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/wi_fi" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--   Event     -->
+        <RelativeLayout
+            android:id="@+id/event"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toTopOf="@id/location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_event"
+                style="@style/GenerateButtonBackground">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_event" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_event"
+                android:layout_alignEnd="@id/linearLayout_event">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/event" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--    Contact    -->
+        <RelativeLayout
+            android:id="@+id/contact"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toTopOf="@id/whatsapp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/website">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_contact"
+                style="@style/GenerateButtonBackground"
+                android:background="@drawable/btn_background">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_contact" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_contact"
+                android:layout_alignEnd="@id/linearLayout_contact">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/contact" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--   Business     -->
+        <RelativeLayout
+            android:id="@+id/business"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toTopOf="@id/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Wi_Fi">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_business"
+                style="@style/GenerateButtonBackground"
+                android:background="@drawable/btn_background">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_business" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_business"
+                android:layout_alignEnd="@id/linearLayout_business">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/business" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--   Location     -->
+        <RelativeLayout
+            android:id="@+id/location"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toTopOf="@id/x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/event">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_location"
+                style="@style/GenerateButtonBackground">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_location" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_location"
+                android:layout_alignEnd="@id/linearLayout_location">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/location" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--    WhatsApp    -->
+        <RelativeLayout
+            android:id="@+id/whatsapp"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toTopOf="@id/instagram"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_whatsapp"
+                style="@style/GenerateButtonBackground"
+                android:background="@drawable/btn_background">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_whatsapp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_whatsapp"
+                android:layout_alignEnd="@id/linearLayout_whatsapp">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/whatsapp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--   Email     -->
+        <RelativeLayout
+            android:id="@+id/email"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toTopOf="@id/telephone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/business">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_email"
+                style="@style/GenerateButtonBackground"
+                android:background="@drawable/btn_background">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_email" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_email"
+                android:layout_alignEnd="@id/linearLayout_email">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/email" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--   X     -->
+        <RelativeLayout
+            android:id="@+id/x"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_x"
+                style="@style/GenerateButtonBackground">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_x" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_x"
+                android:layout_alignEnd="@id/linearLayout_x">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/x" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--    Instagram    -->
+        <RelativeLayout
+            android:id="@+id/instagram"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_instagram"
+                style="@style/GenerateButtonBackground"
+                android:background="@drawable/btn_background">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_instagram" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_instagram"
+                android:layout_alignEnd="@id/linearLayout_instagram">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/instagram" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--    Telephone    -->
+        <RelativeLayout
+            android:id="@+id/telephone"
+            style="@style/GenerateButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_telephone"
+                style="@style/GenerateButtonBackground"
+                android:background="@drawable/btn_background">
+
+                <ImageView
+                    style="@style/GenerateButtonImage"
+                    app:srcCompat="@drawable/ic_telephone" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle"
+                android:layout_alignStart="@id/linearLayout_telephone"
+                android:layout_alignEnd="@id/linearLayout_telephone">
+
+                <TextView
+                    style="@style/WrapContent.FontType.GenerateButtonBackgroundTitle.Title"
+                    android:text="@string/telephone" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

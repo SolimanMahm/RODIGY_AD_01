@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_charcoal_84"
+    android:padding="0dp"
+    tools:context=".generate.OneLevelActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_image" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Base"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            style="@style/TopBar"
+            app:layout_constraintBottom_toTopOf="@id/container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/btn_back"
+                style="@style/WrapContent.TopBarButtonBackground">
+
+                <ImageView
+                    style="@style/TopBarButtonImage"
+                    android:paddingLeft="@dimen/_4sdp"
+                    app:srcCompat="@drawable/ic_back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/WrapContent.FontType.TopBarTitle"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="@string/text" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/topBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="linearLayout2" />
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:scrollbarThumbVertical="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBarrier">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="9">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/borderCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:cardBackgroundColor="@color/dark_charcoal"
+                        app:layout_constraintBottom_toBottomOf="@id/container"
+                        app:layout_constraintEnd_toEndOf="@id/container"
+                        app:layout_constraintStart_toStartOf="@id/container"
+                        app:layout_constraintTop_toTopOf="@id/container"
+                        app:strokeColor="@color/beloved_sunflower"
+                        app:strokeWidth="@dimen/_2sdp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_2sdp"
+                        android:paddingVertical="@dimen/_16sdp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="@+id/borderCard"
+                        app:layout_constraintEnd_toEndOf="@id/borderCard"
+                        app:layout_constraintStart_toStartOf="@id/borderCard"
+                        app:layout_constraintTop_toTopOf="@+id/borderCard"
+                        app:strokeColor="@color/dark_charcoal"
+                        app:strokeWidth="@dimen/_4sdp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/_8sdp"
+                            android:layout_marginVertical="@dimen/_16sdp">
+
+                            <ImageView
+                                android:id="@id/image"
+                                style="@style/Image"
+                                android:src="@drawable/ic_text"
+                                app:layout_constraintBottom_toBottomOf="@id/card"
+                                app:layout_constraintTop_toTopOf="@id/card" />
+
+                            <TextView
+                                android:id="@+id/text"
+                                style="@style/TitleTextField"
+                                android:text="@string/text"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/image" />
+
+                            <EditText
+                                android:id="@+id/input"
+                                style="@style/EditText"
+                                android:hint="Enter text"
+                                android:inputType="textCapWords"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/text" />
+
+                            <TextView
+                                android:id="@+id/text2"
+                                style="@style/TitleTextField"
+                                android:text="@string/text"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/input" />
+
+                            <EditText
+                                android:id="@+id/input2"
+                                style="@style/EditText"
+                                android:hint="Enter text"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/text2" />
+
+                            <TextView
+                                android:id="@+id/text3"
+                                style="@style/TitleTextField"
+                                android:text="@string/text"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/input2" />
+
+                            <EditText
+                                android:id="@+id/input3"
+                                style="@style/EditText"
+                                android:hint="Enter text"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/text3" />
+
+                            <TextView
+                                android:id="@+id/text4"
+                                style="@style/TitleTextField"
+                                android:text="@string/text"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/input3" />
+
+                            <EditText
+                                android:id="@+id/input4"
+                                style="@style/EditText"
+                                android:hint="Enter text"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/text4" />
+
+                            <TextView
+                                android:id="@+id/text5"
+                                style="@style/TitleTextField"
+                                android:text="@string/text"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/input4" />
+
+                            <EditText
+                                android:id="@+id/input5"
+                                style="@style/EditText"
+                                android:layout_height="@dimen/_100sdp"
+                                android:ems="10"
+                                android:gravity="top"
+                                android:hint="Enter text"
+                                android:inputType="textMultiLine"
+                                app:layout_constraintStart_toStartOf="@id/card"
+                                app:layout_constraintTop_toBottomOf="@id/text5" />
+
+                            <Button
+                                android:id="@+id/btn"
+                                style="@style/Button"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/input5" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
